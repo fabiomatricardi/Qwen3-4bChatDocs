@@ -49,4 +49,21 @@ python .\QWEN3-4B-it.py
 > NOTE: Remember that Starting multi line input, you need to  Enter your text (end input with Ctrl+D on Unix or Ctrl+Z on Windows)
 
 
+### Limitations
+This is a Naive implementation of RAG, not relying of any kind of embedding strategy
+It is more an ICL (In Context Learning) application, where the model Read and retrieve through the prompt, following the user instructions.
+#### Missing part
+For now there is no check on the lenght of the document, and there is no control on the number of tokens in the chat history. It is turn based (max turns is 16, after that the chat history is trimmed keeping the last 14 turns)
+
+
+### External software and attribution
+- [Windows binaries of GNU Wget](https://eternallybored.org/misc/wget/) 
+- [MSDOS Unzip 6.0 & Zip 3.0](https://archive.org/download/infozip_msdos/unz600x3.zip)
+
+
+
+
+
+
+
 
