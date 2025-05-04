@@ -52,6 +52,36 @@ If you don't know use `-ngl 999`
 python .\QWEN3-4B-it.py
 ```
 
+Or after the intallation and download process, run from the terminal, with the venv activated:
+```
+start.bat
+```
+
+### VRAM and RAM requirements
+The Qwen3-4B Language Model has 37 layers.
+The version we donwloaded is the **Q4_K_L** that uses Uses Q8_0 for embed and output weights.
+So, to sum it up, you need only 2.5 Gb to run the model... BUT the KV cache used for the context lenght can be even higher!
+
+For example, if you set `-c 16348` (16k tokens context window) you need quite a lot of VRAM/RAM
+```
+llama_kv_cache_unified: kv_size = 16352, type_k = 'f16', type_v = 'f16', n_layer = 36, can_shift = 1, padding = 32
+llama_kv_cache_unified:        CPU KV buffer size =  2299.50 MiB
+llama_kv_cache_unified: KV self size  = 2299.50 MiB, K (f16): 1149.75 MiB, V (f16): 1149.75 MiB
+llama_context:    Vulkan0 compute buffer size =  1181.38 MiB
+llama_context: Vulkan_Host compute buffer size =    36.94 MiB
+```
+```
+weights:    2.5 Gb
+KV cache:   2.3 Gb
+Compute:    1.2 Gb
+------------------
+Total       6.0 Gb
+```
+
+What does it mean?
+- modify the start.bat file starting with little context (8192), or less layers offloaded to GPU (if you have any)
+- increase little by little
+- be ready to wait many seconds before the first token is generated
 
 ### Interface commands
 ```
