@@ -37,13 +37,15 @@ Unzip the archive in your Project repo directory (if you cloned this Repo `Qwen3
 - Open a new terminal in the Project repo directory
 - Run the llamaserver, where `-c` is the context window
 ```
-.\llama-server.exe -m .\Qwen_Qwen3-4B-Q4_K_L.gguf -c 32768
+.\llama-server.exe -m .\Qwen_Qwen3-4B-Q4_K_L.gguf -c 16348
 ```
-if you have a GPU you can also offload some layers with the `-ngl` flag
+> Note that this model has a 32k context capability, but the VRAM requirements are really high. So I started setting it into half 
+
+If you have a GPU you can also offload some layers with the `-ngl` flag
 The command below will offload all Layers
 If you don't know use `-ngl 999`
 ```
-.\llama-server.exe -m .\Qwen_Qwen3-4B-Q4_K_L.gguf -c 32768 -ngl 37
+.\llama-server.exe -m .\Qwen_Qwen3-4B-Q4_K_L.gguf -c 16348 -ngl 37
 ```
 - In another terminal window, with the `venv` activated, run
 ```
@@ -74,7 +76,7 @@ For now there is no check on the lenght of the document, and there is no control
 
 ### External software and attribution
 - [Windows binaries of GNU Wget](https://eternallybored.org/misc/wget/) 
-- [MSDOS Unzip 6.0 & Zip 3.0](https://archive.org/download/infozip_msdos/unz600x3.zip)
+
 
 
 
