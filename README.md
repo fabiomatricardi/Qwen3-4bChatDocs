@@ -7,6 +7,16 @@ Tested on Windows 11 PC, running Python 3.12.5
 - Clone the repo
 - Enter the Project directory
 `cd Qwen3-4bChatDocs`
+From the terminal run `install.bat` that will:
+- create and activate a `venv`
+- install the dependencies
+- download the GGUF file
+- unzip the llama.cpp binaries
+- run the server
+- start the python chat application
+
+
+#### If you want to do it manually...
 - create a `venv` and activate it
 ```
 python -m venv venv
@@ -26,6 +36,7 @@ Unzip the archive in your Project repo directory (if you cloned this Repo `Qwen3
 ```
 if you have a GPU you can also offload some layers with the `-ngl` flag
 The command below will offload all Layers
+If you don't know use `-ngl 999`
 ```
 .\llama-server.exe -m .\Qwen_Qwen3-4B-Q4_K_L.gguf -c 32768 -ngl 37
 ```
