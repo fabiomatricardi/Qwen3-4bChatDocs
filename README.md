@@ -4,10 +4,15 @@ Textual interface to chat with your documents using llama-cpp server and Qwen3-4
 Tested on Windows 11 PC, running Python 3.12.5
 
 ### Instructions
+> **⚠️You need to have GIT installed on your PC**
 - Clone the repo
+```
+git clone https://github.com/fabiomatricardi/Qwen3-4bChatDocs.git
+```
 - Enter the Project directory
 `cd Qwen3-4bChatDocs`
-From the terminal run `install.bat` that will:
+
+From the terminal run `install.bat` that will automatically:
 - create and activate a `venv`
 - install the dependencies
 - download the GGUF file
