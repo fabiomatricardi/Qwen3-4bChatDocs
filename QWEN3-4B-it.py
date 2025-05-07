@@ -124,13 +124,14 @@ CONCISE TABLE OF CONTENTS:
 [start of provided text]
 {context} 
 [end of provided text]                       
+/no_think
 
 """
             # CALL local API endpoint
             history = []
-            chathistory = history 
+            chathistory = [] 
             history.append({"role": "user", "content": preparedText})
-            chathistory.append({"role": "user", "content": preparedText})
+            chathistory.append({"role": "user", "content": preparedText})         
             print("\033[92;1m") #green
 
             completion = client.chat.completions.create(
@@ -222,11 +223,12 @@ CONCISE TABLE OF CONTENTS:
 [start of provided text]
 {context} 
 [end of provided text]                       
+/no_think
 
 """
             # CALL local API endpoint
             history = []
-            chathistory = history 
+            chathistory = [] 
             history.append({"role": "user", "content": preparedText})
             chathistory.append({"role": "user", "content": preparedText})
             print("\033[92;1m") #green
