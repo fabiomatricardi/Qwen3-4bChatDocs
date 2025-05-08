@@ -57,6 +57,18 @@ Or after the intallation and download process, run from the terminal, with the v
 start.bat
 ```
 
+---
+
+### Variant with Qwen_Qwen3-1.7B-Q5_K_M.gguf
+Download the GGUF from [the Bartowski repository
+](https://huggingface.co/bartowski/Qwen_Qwen3-1.7B-GGUF/resolve/main/Qwen_Qwen3-1.7B-Q5_K_M.gguf?download=true)
+
+```
+.\llama-server.exe -m .\Qwen_Qwen3-1.7B-Q5_K_M.gguf -c 16348 -ngl 37
+
+python .\QWEN3-1.7B-it_v2.py
+```
+
 ### VRAM and RAM requirements
 The Qwen3-4B Language Model has 37 layers.
 The version we donwloaded is the **Q4_K_L** that uses Uses Q8_0 for embed and output weights.
