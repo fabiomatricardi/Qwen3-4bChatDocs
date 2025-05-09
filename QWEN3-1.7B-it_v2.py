@@ -18,10 +18,11 @@ import pypdf
 # import tiktoken
 import requests
 import json
+from jinja2 import Template
 
 from easygui import fileopenbox
 
-STOPS = ['<|from jinja2 import Templateim_end|>']
+STOPS = ['<|im_end|>']
 COUNTERLIMITS = 16  #an even number
 LLAMA_CPP_SERVER_URL = "http://127.0.0.1:8080"
 TOKENIZE_ENDPOINT = "/tokenize"
