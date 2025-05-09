@@ -29,7 +29,7 @@ python -m venv venv
 ```
 - Install the dependencies
 ```
-pip install easygui tiktoken pypdf rich openai
+pip install easygui tiktoken pypdf rich openai requests jinja2
 ```
 - download the file Qwen_Qwen3-4B-Q4_K_L.gguf from the Bartowski repository [HuggingFaceHub](https://huggingface.co/bartowski/Qwen_Qwen3-4B-GGUF/resolve/main/Qwen_Qwen3-4B-Q4_K_L.gguf?download=true) or [HF-Mirror](https://hf-mirror.com/bartowski/Qwen_Qwen3-4B-GGUF/resolve/main/Qwen_Qwen3-4B-Q4_K_L.gguf?download=true)
 - The llama-server files are already included in the ZIP archive `llama-b5273-bin-win-vulkan-x64.zip` from this Repo, with the Vulkan driver flavour.
